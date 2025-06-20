@@ -9,7 +9,7 @@ import {
   LatestInvoicesSkeleton,
 } from '@/app/ui/skeletons';
 
-export const dynamic = 'force-dynamic'
+// export const dynamic = 'force-dynamic' THIS added after chapter 9 by chatgpt to make vercel behave like localhost 
  
 export default async function Page() {
   // Remove `const latestInvoices = await fetchLatestInvoices()`
