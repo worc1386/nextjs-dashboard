@@ -16,7 +16,7 @@ const iconMap = {
   invoices: InboxIcon,
 };
 
-export default async function CardWrapper(): Promise<JSX.Element> {
+export default async function CardWrapper() {
   // Fetch all four metrics from your data layer
   const {
     totalPaidInvoices,
@@ -28,26 +28,10 @@ export default async function CardWrapper(): Promise<JSX.Element> {
   // Render the cards with real values
   return (
     <>
-      <Card
-        title="Collected"
-        value={totalPaidInvoices}
-        type="collected"
-      />
-      <Card
-        title="Pending"
-        value={totalPendingInvoices}
-        type="pending"
-      />
-      <Card
-        title="Total Invoices"
-        value={numberOfInvoices}
-        type="invoices"
-      />
-      <Card
-        title="Total Customers"
-        value={numberOfCustomers}
-        type="customers"
-      />
+      <Card title="Collected" value={totalPaidInvoices} type="collected" />
+      <Card title="Pending"   value={totalPendingInvoices} type="pending" />
+      <Card title="Total Invoices" value={numberOfInvoices} type="invoices" />
+      <Card title="Total Customers" value={numberOfCustomers} type="customers" />
     </>
   );
 }
